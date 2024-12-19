@@ -1,5 +1,0 @@
-package com.kabira;
-
-public interface Connectivity {
-
-}
