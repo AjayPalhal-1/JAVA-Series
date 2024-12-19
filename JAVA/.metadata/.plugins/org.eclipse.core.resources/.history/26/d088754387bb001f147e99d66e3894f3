@@ -1,0 +1,13 @@
+package day6;
+
+public class Developer extends Employee{
+	
+	int overTimePay;
+	String skillSet;
+	
+	
+	
+	
+	 
+
+}

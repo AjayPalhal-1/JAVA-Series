@@ -1,0 +1,27 @@
+package day6;
+
+public class Main
+{
+	public  void calSal(Employee e1)
+	{
+		e1.calculateSalary();
+		System.out.println(e1.getSalary());
+		
+	}
+	
+	
+	
+	public static void main(String[] args) 
+	{
+		Employee e1= new Developer(102 , "AJAY" , 50000, 500,"Java");
+		Employee e2 = new Manager(103,"Ankush",600000,5);
+//		e1.calculateSalary();
+//		e2.calculateSalary();
+		Main main = new Main();
+		main.calSal(e1);
+		
+		
+
+	}
+
+}
