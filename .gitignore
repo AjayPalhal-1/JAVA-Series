@@ -1,0 +1,22 @@
+/bin/
+# Eclipse specific files
+.metadata/
+*.class
+*.war
+*.ear
+*.log
+
+# Java specific files
+*.jar
+*.iml
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Gradle
+.gradle/
+build/
+
+# Maven
+target/
