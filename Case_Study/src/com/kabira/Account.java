@@ -3,6 +3,7 @@ package com.kabira;
 //import java.util.Date;
 
 public abstract class Account {
+	int balance ;
 	int accNo;
 	String accHolderName;
 	long  moNo;	
@@ -12,9 +13,12 @@ public abstract class Account {
 	int age;
 	
 	
-	public Account(int accNo, String accHolderName, long moNo, Address postal, Date dateOfBirth, Date accOpening,
-			int age) {
+	
+
+	public Account(int balance, int accNo, String accHolderName, long moNo, Address postal, Date dateOfBirth,
+			Date accOpening, int age) {
 		super();
+		this.balance = balance;
 		this.accNo = accNo;
 		this.accHolderName = accHolderName;
 		this.moNo = moNo;
@@ -96,6 +100,18 @@ public abstract class Account {
 	
 	
 	
+	public int getBalance() {
+		return balance;
+	}
+
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+
+	public abstract void deposit(int amnt);
+	public abstract void intrestCalculate();
 	
 	
 	
