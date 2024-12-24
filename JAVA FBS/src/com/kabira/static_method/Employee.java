@@ -41,6 +41,7 @@ public  abstract class Employee {
 		System.out.println("Emp Id : " + id);
 		System.out.println("Emp Name :"+ name);
 		System.out.println("Emp Salary :"+ salary );
+		this.totalCount();
 		
 	}
 	
