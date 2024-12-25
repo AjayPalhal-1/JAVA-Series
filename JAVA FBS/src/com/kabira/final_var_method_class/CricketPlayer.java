@@ -17,11 +17,11 @@ public class CricketPlayer  extends Player{
 		this.totalRuns = totalRuns;
 	}
 	
-	public void display()
-	{
-		super.display();
-		System.out.println("Player Runs : " +this.getTotalRuns());
-	}
+//	public void display()
+//	{
+//		super.display();
+//		System.out.println("Player Runs : " +this.getTotalRuns());
+//	}
 
 	
 	

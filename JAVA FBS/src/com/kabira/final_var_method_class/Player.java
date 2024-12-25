@@ -1,6 +1,6 @@
 package com.kabira.final_var_method_class;
 
-public class Player {
+public  class Player {
 	
 	static final  int id = 101;
 	String name;
@@ -31,7 +31,7 @@ public class Player {
 		this.jerseyNo = jerseyNo;
 	}
 	
-	public void display()
+	 final public void display()
 	{
 	
 		System.out.println("Player ID :"+this.getId());
