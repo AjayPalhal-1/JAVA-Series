@@ -5,6 +5,11 @@
 *.war
 *.ear
 *.log
+*.settings
+*.classpath
+*.project
+*.settings
+
 
 # Java specific files
 *.jar

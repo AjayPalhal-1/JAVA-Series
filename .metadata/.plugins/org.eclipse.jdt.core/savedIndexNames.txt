@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+/media/ajay/New Volume/AJAY JAVA/JAVA Eclipse Workspace/.metadata/.plugins/org.eclipse.jdt.core
-1791329824.index
-3123450018.index
-1865797976.index

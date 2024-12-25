@@ -2,20 +2,21 @@ package com.kabira.final_var_method_class;
 
 public class Player {
 	
-	int id;
+	static final  int id = 101;
 	String name;
 	int jerseyNo;
+	
+	
+	
 	public Player(int id, String name, int jerseyNo) {
-		super();
-		this.id = id;
+		
+//		this.id = id;
 		this.name = name;
 		this.jerseyNo = jerseyNo;
 	}
 	public int getId() {
 		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
+	
 	}
 	public String getName() {
 		return name;
@@ -28,6 +29,15 @@ public class Player {
 	}
 	public void setJerseyNo(int jerseyNo) {
 		this.jerseyNo = jerseyNo;
+	}
+	
+	public void display()
+	{
+	
+		System.out.println("Player ID :"+this.getId());
+		System.out.println("Player Name :"+this.getName());
+		System.out.println("Player Jersey No.S :"+this.getJerseyNo());
+
 	}
 	
 	
