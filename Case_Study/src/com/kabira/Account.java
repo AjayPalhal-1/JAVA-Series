@@ -4,7 +4,7 @@ package com.kabira;
 
 public abstract class Account {
 	int balance ;
-	int accNo;
+	long accNo;
 	String accHolderName;
 	long  moNo;	
 	Address postal;
@@ -15,11 +15,11 @@ public abstract class Account {
 	
 	
 
-	public Account(int balance, int accNo, String accHolderName, long moNo, Address postal, Date dateOfBirth,
+	public Account(int balance, long accNo, String accHolderName, long moNo, Address postal, Date dateOfBirth,
 			Date accOpening, int age) {
 		super();
 		this.balance = balance;
-		this.accNo = accNo;
+		this.accNo = AccaountNoGenertor();
 		this.accHolderName = accHolderName;
 		this.moNo = moNo;
 		this.postal = postal;
@@ -29,7 +29,7 @@ public abstract class Account {
 	}
 
 
-	public int getAccNo() {
+	public long getAccNo() {
 		return accNo;
 	}
 
@@ -105,7 +105,8 @@ public abstract class Account {
 	}
 
 
-	public void setBalance(int balance) {
+	public void setBalance(int balance)
+	{
 		this.balance = balance;
 	}
 
@@ -113,6 +114,19 @@ public abstract class Account {
 	public abstract void deposit(int amnt);
 	public abstract void intrestCalculate();
 	
+	
+	public static long AccaountNoGenertor()
+	{
+		long num= 6000401;
+		return  ++num;
+	}
+	
+	public void displayAccountDetails()
+	{
+		System.out.println("Acc. Holder Name :"+this.getAccHolderName());
+		System.out.println("Account No :"+this.getAccNo());
+		
+	}
 	
 	
 	
