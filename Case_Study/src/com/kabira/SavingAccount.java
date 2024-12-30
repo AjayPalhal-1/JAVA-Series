@@ -1,5 +1,7 @@
 package com.kabira;
 
+import java.time.LocalDate;
+
 public class SavingAccount extends Account{
 	
 	int baseBalnce;
@@ -7,9 +9,9 @@ public class SavingAccount extends Account{
 
 	
 
-	public SavingAccount(int balance, int accNo, String accHolderName, long moNo, Address postal, Date dateOfBirth,
-			Date accOpening, int age, int baseBalnce) {
-		super(balance, accNo, accHolderName, moNo, postal, dateOfBirth, accOpening, age);
+	public SavingAccount(int balance, int accNo, String accHolderName, long moNo, Address postal, LocalDate dob,
+			LocalDate accOpening, int age, int baseBalnce) {
+		super(balance, accNo, accHolderName, moNo, postal,dob, accOpening, age);
 		this.baseBalnce = baseBalnce;
 	}
 

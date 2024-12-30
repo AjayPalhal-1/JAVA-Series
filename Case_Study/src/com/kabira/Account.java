@@ -1,6 +1,8 @@
 package com.kabira;
 
-//import java.util.Date;
+import java.time.LocalDate;
+import java.util.Scanner;
+
 
 public abstract class Account {
 	int balance ;
@@ -8,22 +10,22 @@ public abstract class Account {
 	String accHolderName;
 	long  moNo;	
 	Address postal;
-	Date  dateOfBirth;
-	Date accOpening;	
+	LocalDate  dob;
+	LocalDate accOpening;	
 	int age;
 	
 	
 	
 
-	public Account(int balance, long accNo, String accHolderName, long moNo, Address postal, Date dateOfBirth,
-			Date accOpening, int age) {
+	public Account(int balance, long accNo, String accHolderName, long moNo, Address postal, LocalDate dob,
+			LocalDate accOpening, int age) {
 		super();
 		this.balance = balance;
 		this.accNo = AccaountNoGenertor();
 		this.accHolderName = accHolderName;
 		this.moNo = moNo;
 		this.postal = postal;
-		this.dateOfBirth = dateOfBirth;
+		this.dob = dob;
 		this.accOpening = accOpening;
 		this.age = age;
 	}
@@ -69,22 +71,22 @@ public abstract class Account {
 	}
 
 
-	public Date getDateOfBirth() {
-		return dateOfBirth;
+	public LocalDate getdob() {
+		return dob;
 	}
 
 
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
+	public void setLocalDateOfBirth(LocalDate dob) {
+		this.dob = dob;
 	}
 
 
-	public Date getAccOpening() {
+	public LocalDate getAccOpening() {
 		return accOpening;
 	}
 
 
-	public void setAccOpening(Date accOpening) {
+	public void setAccOpening(LocalDate accOpening) {
 		this.accOpening = accOpening;
 	}
 
@@ -123,8 +125,30 @@ public abstract class Account {
 	
 	public void displayAccountDetails()
 	{
-		System.out.println("Acc. Holder Name :"+this.getAccHolderName());
-		System.out.println("Account No :"+this.getAccNo());
+		System.out.println("Account Holder Name     : "+this.getAccHolderName());
+		System.out.println("Account Number          : "+this.getAccNo());
+		System.out.println("Account Holder Age      : "+this.getAge());
+		System.out.println("Account Balance         : "+this.getBalance());
+		System.out.println("Account Holder Date Of Birth : "+ this.getdob());
+		System.out.println("Account Opening LocalDate    : "+this.getAccOpening());
+		
+	}
+	
+	public void openAccount()
+	{
+		Scanner sc = new Scanner(System.in);
+		int ch ;
+		System.out.println("\nSaving Account :  Press 1 \n");
+		System.out.println("Enter Your Name :");
+		this.accHolderName  = sc.nextLine();
+		System.out.println("Enter Your Date Of Birth  :");
+		this.dob = LocalDate.parse(sc.nextLine());
+		System.out.println("Enter Your Adress :");
+//		this.postal = new Address(sc.nextLine());
+		System.out.println("Enter Todays Date :");
+		this.accOpening = LocalDate.parse(sc.nextLine());
+		
+	
 		
 	}
 	

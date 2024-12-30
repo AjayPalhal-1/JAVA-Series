@@ -1,4 +1,4 @@
-package com.kabira.exception_handling;
+package com.kabira.exception;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
