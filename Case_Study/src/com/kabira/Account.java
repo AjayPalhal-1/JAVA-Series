@@ -131,6 +131,7 @@ public abstract class Account {
 		System.out.println("Account Balance         : "+this.getBalance());
 		System.out.println("Account Holder Date Of Birth : "+ this.getdob());
 		System.out.println("Account Opening LocalDate    : "+this.getAccOpening());
+		postal.addressDisplay();
 		
 	}
 	
@@ -138,15 +139,26 @@ public abstract class Account {
 	{
 		Scanner sc = new Scanner(System.in);
 		int ch ;
-		System.out.println("\nSaving Account :  Press 1 \n");
+		System.out.println("\nSaving Account :  Press 1 ");
 		System.out.println("Enter Your Name :");
 		this.accHolderName  = sc.nextLine();
-		System.out.println("Enter Your Date Of Birth  :");
-		this.dob = LocalDate.parse(sc.nextLine());
-		System.out.println("Enter Your Adress :");
-//		this.postal = new Address(sc.nextLine());
-		System.out.println("Enter Todays Date :");
-		this.accOpening = LocalDate.parse(sc.nextLine());
+//		System.out.println("Enter Your Date Of Birth  :");
+//		this.dob = LocalDate.parse(sc.nextLine());
+		System.out.println("Enter Your Adress  : Taluka :");
+		String taluka = sc.nextLine();
+		System.out.println("Enter Your Adress  : zilha :");
+		String zilha = sc.nextLine();
+		System.out.println("Enter Your Adress  : Pincode :");
+		int  pincode = sc.nextInt();
+		this.postal = new Address( taluka , zilha , pincode );
+		System.out.println("Enter Balance      :");
+		this.balance= sc.nextInt();
+		System.out.println("Enter Your Age      :");
+		this.age= sc.nextInt();
+		System.out.println("Enter Your Mobile Number   :");
+		this.moNo= sc.nextLong();
+//		System.out.println("Enter Todays Date :");
+		this.accOpening = LocalDate.now();	
 		
 	
 		

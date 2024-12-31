@@ -37,7 +37,7 @@ public class MainApp {
 		System.out.println("String   :  "+str);
 //		System.out.println("Sentences:  "+sentence);
 		
-		System.out.println("Array Elements Are ");
+		System.out.println("<<<<<<<<<<<<Array Elements Are >>>>> ");
 		
 		for(int itr = 0; itr< size ;itr ++)
 		{

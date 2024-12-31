@@ -30,6 +30,12 @@ public class Address {
 		this.pincode = pincode;
 	}
 	
+	public void addressDisplay()
+	{
+		System.out.println("District : "+this.getZila());
+		System.out.println("Taluka   : "+this.getTaluka());
+		System.out.println("Pin Code : "+this.getPincode());
+	}
 	
 
 }
