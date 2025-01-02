@@ -12,11 +12,17 @@ public class MainApp {
 		
 		Set<Account> acnt= new HashSet<Account>();
 		
-		acnt.add(new Account(123,"Ap"));
+//		acnt.add(new Account(123,"Ap"));
+		acnt.add(new Account(23 ,"Ap"));
 		acnt.add(new Account(123 ,"Ap"));
+
+		System.out.println("HashCode :"+acnt.hashCode());
+		
+		Object o;
+
 		
 		
-	System.out.println("Size Of SeT "+acnt.size());	;
+	System.out.println("Size Of Set "+acnt.size());	;
 		
 		
 		
