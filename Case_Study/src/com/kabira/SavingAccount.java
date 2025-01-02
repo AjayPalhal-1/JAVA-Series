@@ -2,16 +2,13 @@ package com.kabira;
 
 import java.time.LocalDate;
 
-public class SavingAccount extends Account{
-	
+public class SavingAccount extends Account {
+
 	int baseBalnce;
-	
 
-	
-
-	public SavingAccount(int balance, int accNo, String accHolderName, long moNo, Address postal, LocalDate dob,
+	public SavingAccount(int balance, String accHolderName, long moNo, Address postal, LocalDate dob,
 			LocalDate accOpening, int age, int baseBalnce) {
-		super(balance, accNo, accHolderName, moNo, postal,dob, accOpening, age);
+		super(balance, accHolderName, moNo, postal, dob, accOpening, age);
 		this.baseBalnce = baseBalnce;
 	}
 
@@ -22,30 +19,16 @@ public class SavingAccount extends Account{
 	public void setBaseBalnce(int baseBalnce) {
 		this.baseBalnce = baseBalnce;
 	}
-	
 
-	public  void deposit(int amnt)
-	{
-		
-		this.setBalance(getBaseBalnce()+ amnt);
-		System.out.println("Total Amonut :"+this.getBalance());
-		
-		
+	public void deposit(int amnt) {
+
+		this.setBalance(getBaseBalnce() + amnt);
+		System.out.println("Total Amonut :" + this.getBalance());
+
 	}
-	public  void intrestCalculate()
-	{
+
+	public void intrestCalculate() {
 		System.out.println("hi");
 	}
-	
-	
-	
-
-	
-
-
-	
-	
-	
-	
 
 }
