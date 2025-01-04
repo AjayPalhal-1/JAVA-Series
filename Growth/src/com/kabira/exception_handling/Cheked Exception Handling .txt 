@@ -1,0 +1,18 @@
+
+Checked  Exception : 
+
+so we can say that the exception which may predicted by developers and 
+if they want to handle it they need to write thier own cutome / 
+user defind excption to handle it for writing sepcial class of that 
+excption they need to extend Exception which provide nesccary things
+and why they need to extend exception coz its predicatable and can 
+solved be developer
+
+ 
+
+- Exceptions that are **predictable** (like age validation, file handling, or database
+  operations) and require developers to handle them explicitly are best suited as 
+  **checked exceptions**.  
+- To create a custom exception for such scenarios, you need to **extend `Exception`**, 
+  as this enforces compile-time checking and makes handling the exception mandatory.  
+- This ensures developers write specific logic to handle these predictable issues effectively.  
