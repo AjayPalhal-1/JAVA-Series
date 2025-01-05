@@ -32,9 +32,10 @@ public class Address {
 	
 	public void addressDisplay()
 	{
-		System.out.println("District : "+this.getZila());
-		System.out.println("Taluka   : "+this.getTaluka());
-		System.out.println("Pin Code : "+this.getPincode());
+
+		System.out.println("District                     : "+this.getZila());
+		System.out.println("Taluka                       : "+this.getTaluka());
+		System.out.println("Pin Code                     : "+this.getPincode());
 	}
 	
 
