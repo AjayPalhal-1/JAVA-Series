@@ -15,7 +15,7 @@ public abstract class Account {
 
 	public Account(int balance, String accHolderName, long moNo, Address postal, LocalDate dob, LocalDate accOpening,
 			int age) {
-		super();
+		
 		this.balance = balance;
 		this.accNo = AccaountNoGenertor();
 		this.accHolderName = accHolderName;

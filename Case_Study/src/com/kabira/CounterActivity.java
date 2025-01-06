@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 public class CounterActivity {
 
+	private static Scanner sc = new Scanner(System.in);
+
 	public static int menu() {
-		Scanner sc = new Scanner(System.in);
 
 		int choice;
 		System.out.println("Please Enter Your Choise To Open Account");
@@ -16,15 +17,16 @@ public class CounterActivity {
 		System.out.println("4 : Loan Account");
 		choice = sc.nextInt();
 
-		return choice ;		
+		return choice;
 
 	}
-	
+
 	public static int menuDisplayAccountDetails() {
-		
+
 		Scanner sc = new Scanner(System.in);
 		int choice;
-		System.out.println();System.out.println();
+		System.out.println();
+		System.out.println();
 		System.out.println("Please Enter Your Choise To Display Account");
 		System.out.println("1 : Saving Account");
 		System.out.println("2 : Current Account");
@@ -32,14 +34,12 @@ public class CounterActivity {
 		System.out.println("4 : Loan Account");
 		choice = sc.nextInt();
 
-		return choice ;		
+		return choice;
 
 	}
 
-	public static Account openAccount() {
+	public static Account openAccount(int ch) {
 
-		Scanner sc = new Scanner(System.in);
-	
 		System.out.println("Enter Your Name     :");
 		String accHolderName = sc.nextLine();
 
@@ -63,7 +63,76 @@ public class CounterActivity {
 //		System.out.println("Enter Your Amount You ");
 //		int amount = sc.nextInt();
 
-		return new SavingAccount(balance, accHolderName, moNo, postal, accOpening, accOpening, age);
+		if (ch == 1) {
+			return new SavingAccount(balance, accHolderName, moNo, postal, accOpening, accOpening, age);
+
+		} else if (ch == 2) {
+			return new CurrentAccount(balance, accHolderName, moNo, postal, accOpening, accOpening, age);
+
+		} else {
+			return null;
+		}
+
+	}
+
+	public static void openAcc(Account[] ref) {
+		// Switch Case For Opening Account
+		int ch = CounterActivity.menu();
+
+		switch (ch) {
+
+		case 1:
+			System.out.println("Opening a Saving Account...");
+			ref[0] = CounterActivity.openAccount(ch);
+
+			break;
+		case 2:
+			System.out.println("Opening a Current Account...");
+			ref[1] = CounterActivity.openAccount(ch);
+			break;
+		case 3:
+			System.out.println("Opening a Salary Account...");
+			// Add logic to open a Salary Account here
+			break;
+		case 4:
+			System.out.println("Opening a Loan Account...");
+			// Add logic to open a Loan Account here
+			break;
+		default:
+			System.out.println("Invalid choice. Please select a valid option.");
+			break;
+		}
+
+	}
+
+	public static void displayAllAcc(Account[] ref) {
+		// TODO Auto-generated method stub
+		// Switch Case For Displaying Account
+
+		switch (CounterActivity.menuDisplayAccountDetails()) {
+
+		case 1:
+
+			System.out.println("Saving Account Details ....");
+			ref[0].displayAccountDetails();
+
+			break;
+		case 2:
+			System.out.println("Current Account Details ....");
+			// Add logic to open a Current Account here
+			break;
+		case 3:
+			System.out.println("Salary Account Details ....");
+			// Add logic to open a Salary Account here
+			break;
+		case 4:
+			System.out.println("Loan Account Details ....");
+			// Add logic to open a Loan Account here
+			break;
+		default:
+			System.out.println("Invalid choice. Please select a valid option.");
+			break;
+		}
 
 	}
 
