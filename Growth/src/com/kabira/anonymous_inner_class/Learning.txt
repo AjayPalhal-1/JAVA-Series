@@ -1,0 +1,23 @@
+
+
+1. What is an Anonymous Class?
+   An anonymous class is a **class without a name** that is created to extend a class or 
+   implement an interface for one-time use. It is written directly inside a statement.
+
+2. Why Use It? 
+   Anonymous classes are useful when you need to quickly add or customize behavior for a
+    single instance without creating a separate class.
+
+3. How Does It Work? 
+   - It can override methods of a superclass or provide implementations for interface methods.  
+   - It can access variables from the enclosing class or method.  
+
+4. What Can’t It Do? 
+   - It cannot define its own **constructors** or **static members** (like static variables or methods).  
+   - It cannot be reused elsewhere because it has no name.
+   - we can accesses static member and method in it 
+
+5. Where Is It Used?
+   Commonly used in **event handling**, **callbacks**, or other situations where a quick, custom 
+   implementation is needed.  
+
