@@ -1,0 +1,31 @@
+1. **HashMap**:
+   - Order: Does not guarantee any order of the keys.
+   - Purpose: Efficient for lookups, additions, and deletions.
+   - Use Case: When order of elements does not matter.
+   - Behavior: The order might appear random due to the hashing mechanism.
+   - Key Point: The order of elements in HashMap can vary, even though it might appear 
+     sorted in some cases (as seen in your example).
+
+2. **TreeMap**:
+   - Order: Automatically sorts the keys in natural order (ascending for numbers, alphabetical for strings).
+   - Purpose: Use when you need sorted keys.
+   - Use Case: When you need keys to be in a sorted order.
+   - Behavior: Always provides sorted output of keys, regardless of the insertion order.
+   - Key Point: Sorting is guaranteed, making it useful for maintaining a natural order of keys.
+
+3. **LinkedHashMap**:
+   - Order: Maintains insertion order of the keys.
+   - Purpose: Useful when the order of insertion needs to be preserved.
+   - Use Case: When you need to maintain the order in which elements were added.
+   - Behavior: Outputs elements in the order they were inserted, unlike HashMap.
+   - Key Point: Keeps the insertion order, unlike HashMap and TreeMap.
+
+Key Differences:
+- HashMap: No order guarantee, fast for general usage.
+- TreeMap: Sorted keys in natural order.
+- LinkedHashMap: Maintains the insertion order of keys.
+
+Conclusion:
+- Use HashMap when you don't care about the order of elements.
+- Use TreeMap when you need keys to be sorted.
+- Use LinkedHashMap when you need to preserve the order in which elements are added.
