@@ -40,7 +40,7 @@ public class Account implements Runnable {
 		} else {
 			this.setBalance((this.getBalance() - amount));
 			System.out.println("Trasaction Done Succesfully ...");
-			System.out.println("Remained Balance :"+this.getBalance());
+			System.out.println("Remained Balance :  "+this.getBalance());
 		}
 	}
 
