@@ -1,15 +1,12 @@
 package com.kabira.rooms;
-import java.util.ArrayList;
+
+import java.util.List;
 
 import com.kabira.devices.Device;
-import com.kabira.devices.LightDevice;
 
-public class Hall extends Room {
+public class Bedroom extends Room{
 
-	public Hall() {
-		device = new ArrayList<Device>();
-	}
-
+	List<Device> device;
 	@Override
 	public void displayRoomDetails() {
 																																																																																																																						
@@ -20,10 +17,5 @@ public class Hall extends Room {
 	public void addDevices() {
 		menuAddDevice();		
 	}
-
-	
-
-
-	
 
 }

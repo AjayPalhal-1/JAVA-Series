@@ -7,12 +7,15 @@ import com.kabira.devices.Device;
 public class Kitchen extends Room {
 	
 	List<Device> device;
-	public  void addDevices() {
-		
-		
+	@Override
+	public void displayRoomDetails() {
+																																																																																																																						
+
 	}
-	
-	public  void displayRoomDetails() {
+
+	@Override
+	public void addDevices() {
+		menuAddDevice();		
 	}
 	
 	
