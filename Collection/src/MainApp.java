@@ -8,6 +8,9 @@ public class MainApp {
 		System.out.println(random.size());
 		random.add(223);
 		random.add("AP");
+
+
+		random.add("AJAy")
 		System.out.println(random.size());
 		
 	}
