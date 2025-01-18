@@ -12,14 +12,22 @@ import com.kabira.devices.TempratureDevice;
 public abstract class Room {
 
 
-	static List<Device> device;
+	 List<Device> device;
+	 
+
+	public List<Device> getDevice() {
+		return device;
+	}
+
+	
 
 	public abstract void addDevices();
 
 	public abstract void displayRoomDetails();
 
-	public static void menuAddDevice() {
+	public  void menuAddDevice() {
 		Scanner sc = new Scanner(System.in);
+
 
 		int ch;
 		System.out.println("Add Light Device             : 1");
@@ -45,7 +53,7 @@ public abstract class Room {
 
 			LightDevice lightDevice = new LightDevice(lightDeviceName, brand, warranty, status);
 
-			device.add(lightDevice);
+			this.getDevice().add(lightDevice);
 			System.out.println("Light Device has been added. ");
 			break;
 
